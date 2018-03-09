@@ -42,9 +42,9 @@ public class TriAdapter extends ArrayAdapter<TripModel> {
         firstname.setText(trip.getFirstname());
         lastname.setText(trip.getLastname());
         SimpleDateFormat dateHeure = new SimpleDateFormat("dd-MM-yyyy-hh:mm");
-        String dateString = dateHeure.format(trip.getDate());
+        String dateString = dateHeure.format(trip.getDate()) + " PM";
         date.setText(dateString);
-        String priceString = String.valueOf(trip.getPrice());
+        String priceString = "$" + String.valueOf(trip.getPrice());
         price.setText(priceString);
         // Return the completed view to render on screen
         return convertView;
