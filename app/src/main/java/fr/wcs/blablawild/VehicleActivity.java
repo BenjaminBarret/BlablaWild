@@ -49,6 +49,7 @@ public class VehicleActivity extends AppCompatActivity {
                         buttonSendVehicle.setEnabled(false);
                         hours.setVisibility(view.GONE);
                         km.setVisibility(view.GONE);
+                        speed.setVisibility(view.GONE);
                         break;
 
                     case 1:
