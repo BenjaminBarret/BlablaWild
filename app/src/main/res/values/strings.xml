@@ -8,4 +8,12 @@
     <string name="destination">Destination</string>
     <string name="departure">Departure</string>
     <string name="search">Search</string>
+
+    <string-array name="vehicles_array">
+        <item>Please select...</item>
+        <item>Car</item>
+        <item>Boat</item>
+        <item>Plane</item>
+    </string-array>
+
 </resources>

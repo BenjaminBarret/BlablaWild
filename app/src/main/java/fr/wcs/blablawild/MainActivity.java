@@ -35,4 +35,9 @@ public class MainActivity extends AppCompatActivity {
         Intent goToItinerarySearchActivity = new Intent(MainActivity.this, ItinerarySearchActivity.class);
         MainActivity.this.startActivity(goToItinerarySearchActivity);
     }
+
+    public void goToVehicleActivity(View view) {
+        Intent goToVehicleActivity = new Intent(MainActivity.this, VehicleActivity.class);
+        MainActivity.this.startActivity(goToVehicleActivity);
+    }
 }
