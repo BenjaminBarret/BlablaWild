@@ -50,6 +50,7 @@
         android:ems="10"
         android:hint="Hours"
         android:inputType="textPersonName"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Model"
         tools:text="Hours" />
@@ -63,6 +64,7 @@
         android:ems="10"
         android:hint="Hours"
         android:inputType="textPersonName"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Hours"
         tools:text="Kilometers" />
@@ -89,6 +91,7 @@
         android:ems="10"
         android:hint="Speed"
         android:inputType="textPersonName"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Km"
         tools:text="speed" />
