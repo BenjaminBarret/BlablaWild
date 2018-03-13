@@ -34,7 +34,7 @@ public class ItinerarySearchActivity extends AppCompatActivity {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             private void updateLabel() {
-                String myFormat = "MM/dd/yy"; //In which you need put here
+                String myFormat = "dd/MM/yy"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
 
                 editDate.setText(sdf.format(myCalendar.getTime()));
