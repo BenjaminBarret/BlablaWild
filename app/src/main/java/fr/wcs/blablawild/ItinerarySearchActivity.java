@@ -16,8 +16,7 @@ import java.util.Locale;
 
 public class ItinerarySearchActivity extends AppCompatActivity {
 
-    public static String EXTRA_DESTINATION = "EXTRA_DESTINATION";
-    public static String EXTRA_DEPARTURE = "EXTRA_DEPARTURE";
+    public static String RESULTSEARCH = "RESULTSEARCH";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,6 @@ public class ItinerarySearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_itinerary_search);
 
         Button buttonSearch = findViewById(R.id.button_search);
-
-
 
         final Calendar myCalendar = Calendar.getInstance();
 
@@ -81,8 +78,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
 
                 else{
                         Intent goToItineraryListActivity = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-                        goToItineraryListActivity.putExtra(EXTRA_DESTINATION, destinationValue);
-                        goToItineraryListActivity.putExtra(EXTRA_DEPARTURE, departureValue);
+                        SearchModel searchModel = new SearchModel(departureValue, destinationValue, dateValue);
+                        goToItineraryListActivity.putExtra(RESULTSEARCH, searchModel);
                         ItinerarySearchActivity.this.startActivity(goToItineraryListActivity);
                 }
 

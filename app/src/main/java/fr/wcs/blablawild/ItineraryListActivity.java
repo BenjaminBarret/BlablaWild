@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import static fr.wcs.blablawild.ItinerarySearchActivity.EXTRA_DEPARTURE;
-import static fr.wcs.blablawild.ItinerarySearchActivity.EXTRA_DESTINATION;
+import static fr.wcs.blablawild.ItinerarySearchActivity.RESULTSEARCH;
 
 public class ItineraryListActivity extends AppCompatActivity {
 
@@ -19,16 +19,15 @@ public class ItineraryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_list);
 
-        Intent intItineraryListActivity = getIntent();
-        String departure = intItineraryListActivity.getStringExtra(EXTRA_DEPARTURE);
-        String destination = intItineraryListActivity.getStringExtra(EXTRA_DESTINATION);
+        SearchModel searchModelList = getIntent().getExtras().getParcelable(RESULTSEARCH);
+
 
         ListView listTrip = findViewById(R.id.list_trip);
         ArrayList<TripModel> results = new ArrayList<>();
 
-        setTitle(departure + " >> " + destination);
-
+        setTitle(searchModelList.getDeparture() + " >> " + searchModelList.getDestination());
         SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy-hh:mm");
+        Toast.makeText(this, searchModelList.getDate(), Toast.LENGTH_SHORT).show();
 
         try {
             results.add(new TripModel("Eric", "Cartman", date.parse("21/02/2017-15:30"), 15));
